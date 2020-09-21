@@ -26,6 +26,15 @@ class Sum_of_even_numbers_after_queriesTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+  
+  func testExample2() throws {
+    let viewModel = ViewModel()
+    let A = [1,2,3,4]
+    let queries = [[1,0], [-3,1], [-4,0], [2,3]]
+    XCTAssertNotEqual(viewModel.sumEvenAfterQueries(A, queries), [])
+      // This is an example of a functional test case.
+      // Use XCTAssert and related functions to verify your tests produce the correct results.
+  }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
