@@ -14,16 +14,19 @@ class ViewModel {
   //    Output: [8,6,2,4]
   func sumEvenAfterQueries(_ A: [Int], _ queries: [[Int]]) -> [Int] {
     var A = A
-    var sum = 0
     var output: [Int] = []
+    var sum = 0
+    for val in A {
+      sum += val.isEven() ? val : 0
+    }
+    
     for query in queries {
       let value = query[0]
       let index = query[1]
-      A[index] = A[index] + value
-      sum = 0
-      for val in A {
-        sum += val.isEven() ? val : 0
-      }
+      let prev = A[index]
+      A[index] += value
+      sum -= prev.isEven() ? (prev) : 0
+      sum += A[index].isEven() ? A[index] : 0
       output.append(sum)
     }
     
