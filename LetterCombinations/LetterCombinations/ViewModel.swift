@@ -8,8 +8,10 @@
 import Foundation
 
 class ViewModel {
-//  Input: digits = "23"
-//  Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+//  ["adg","adh","adi", "aeg","aeh","aei", "afg","afh","afi",
+//   "bdg","bdh","bdi", "beg","beh","bei", "bfg","bfh","bfi",
+//   "cdg","cdh","cdi", "ceg","ceh","cei", "cfg","cfh","cfi"]
+  
   let dic: [String:[String]] = ["2":["a","b","c"],
                                 "3":["d","e","f"],
                                 "4":["g","h","i"],
@@ -20,25 +22,29 @@ class ViewModel {
                                 "9":["w","x","y","z"]]
   
   
-  func multiply(string: String, array: [String]) -> [String] {
-    var result: [String] = []
+  func multiply(letter: String, array: [String]) -> [String] {
+    var result :[String] = []
     for item in array {
-      result.append("\(string)\(item)")
+      result.append("\(letter)\(item)")
     }
     return result
   }
   
+  
   func letterCombinations(_ digits: inout String) -> [String] {
-    
     if digits.isEmpty { return [] }
-    if digits.count == 1 {
-      return dic[digits]!
+    if digits.count == 1 { return dic[digits]! }
+    let firstDigit = String(digits.removeLast())
+    let letters = dic[firstDigit]!
+    var result: [String] = []
+    for letter in letters {
+      result += multiply(letter: letter, array: letterCombinations(&digits))
     }
-    return []
+    return result
   }
   
   func letterCombinations(_ digits: String) -> [String] {
-    var reversedDigits = String(digits.reversed())
-    return letterCombinations(&reversedDigits)
+    var digits = String(digits.reversed())
+    return self.letterCombinations(&digits)
   }
 }
