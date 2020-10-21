@@ -36,6 +36,12 @@ class RecursionTests: XCTestCase {
     XCTAssertEqual(result, answer)
   }
   
+  func testRecursionTwo() throws {
+    var input = Array("rroger")
+    reverseString(&input)
+    XCTAssertEqual(Array("regorr"), input)
+  }
+  
   
   func testPerformanceExample() throws {
     // This is an example of a performance test case.
