@@ -42,6 +42,26 @@ class RecursionTests: XCTestCase {
     XCTAssertEqual(Array("regorr"), input)
   }
   
+  func testSwapPairs() throws {
+    let val1 = ListNode(1)
+    let val2 = ListNode(2)
+    let val3 = ListNode(3)
+    let val4 = ListNode(4)
+    let val5 = ListNode(5)
+    
+    val1.next = val2
+    val2.next = val3
+    val3.next = val4
+    val4.next = val5
+    
+    let headNode = swapPairs(val1)
+    var result:[Int] = []
+    headNode?.iterate(visit: { val in
+      result.append(val)
+    })
+    let expectedAnswer = [2,1,4,3,5]
+    XCTAssertEqual(result,expectedAnswer)
+  }
   
   func testPerformanceExample() throws {
     // This is an example of a performance test case.

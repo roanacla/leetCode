@@ -14,6 +14,8 @@
 		DB56E394253F695200D90D8E /* RecursionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56E393253F695200D90D8E /* RecursionTests.swift */; };
 		DB56E39F253F695200D90D8E /* RecursionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56E39E253F695200D90D8E /* RecursionUITests.swift */; };
 		DB56E3B0253F696C00D90D8E /* ReverseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56E3AF253F696C00D90D8E /* ReverseString.swift */; };
+		DBC731B32540EDA800F3F67E /* SwapPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC731B22540EDA800F3F67E /* SwapPairs.swift */; };
+		DBC731B42540EDA800F3F67E /* SwapPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC731B22540EDA800F3F67E /* SwapPairs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 		DB56E39E253F695200D90D8E /* RecursionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursionUITests.swift; sourceTree = "<group>"; };
 		DB56E3A0253F695200D90D8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB56E3AF253F696C00D90D8E /* ReverseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseString.swift; sourceTree = "<group>"; };
+		DBC731B22540EDA800F3F67E /* SwapPairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapPairs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 				DB56E38A253F695200D90D8E /* Info.plist */,
 				DB56E387253F695200D90D8E /* Preview Content */,
 				DB56E3AF253F696C00D90D8E /* ReverseString.swift */,
+				DBC731B22540EDA800F3F67E /* SwapPairs.swift */,
 			);
 			path = Recursion;
 			sourceTree = "<group>";
@@ -262,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC731B32540EDA800F3F67E /* SwapPairs.swift in Sources */,
 				DB56E384253F695000D90D8E /* ContentView.swift in Sources */,
 				DB56E382253F695000D90D8E /* RecursionApp.swift in Sources */,
 				DB56E3B0253F696C00D90D8E /* ReverseString.swift in Sources */,
@@ -272,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC731B42540EDA800F3F67E /* SwapPairs.swift in Sources */,
 				DB56E394253F695200D90D8E /* RecursionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
