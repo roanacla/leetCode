@@ -35,3 +35,17 @@ func searchPos(_ dic: [(Int,Int)], _ target: Int ) -> Int {
   
   return index
 }
+
+
+//Version 2
+
+func searchInsert(_ nums: [Int], _ target: Int) -> Int {
+  
+  for index in 0..<nums.count {
+    if nums[index] >= target {
+      return index
+    }
+  }
+  
+  return nums.count
+}
