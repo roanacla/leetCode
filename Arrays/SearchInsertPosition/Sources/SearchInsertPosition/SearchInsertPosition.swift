@@ -39,7 +39,7 @@ func searchPos(_ dic: [(Int,Int)], _ target: Int ) -> Int {
 
 //Version 2
 
-func searchInsert(_ nums: [Int], _ target: Int) -> Int {
+func searchInsert2(_ nums: [Int], _ target: Int) -> Int {
   
   for index in 0..<nums.count {
     if nums[index] >= target {
@@ -48,4 +48,30 @@ func searchInsert(_ nums: [Int], _ target: Int) -> Int {
   }
   
   return nums.count
+}
+
+//Version 3 : Improving Version 1
+func searchInsert3(_ nums: [Int], _ target: Int) -> Int {
+  return nums.searchInsertAux(target: target)
+}
+
+extension RandomAccessCollection where Element: Comparable {
+  func searchInsertAux(target: Element, in range: Range<Index>? = nil) -> Index {
+    let range = range ?? startIndex..<endIndex
+    guard range.lowerBound < range.upperBound else {
+      return range.lowerBound
+    }
+    
+    let size = distance(from: range.lowerBound, to: range.upperBound)
+    let middle = index(range.lowerBound, offsetBy: size/2)
+    
+    if self[middle] == target {
+      return middle
+    } else if self[middle] > target {
+      return searchInsertAux(target: target, in: range.lowerBound..<middle)
+    } else {
+      return searchInsertAux(target: target, in: index(after: middle)..<range.upperBound)
+    }
+  }
+  
 }
