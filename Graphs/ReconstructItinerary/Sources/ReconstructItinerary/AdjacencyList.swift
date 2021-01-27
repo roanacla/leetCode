@@ -27,8 +27,8 @@ struct AdjacencyList<Element: Hashable>: Graph {
 
     let reversedEdge = Edge(
       source: edge.destination,
-      destination: edge.source,
-      weight: edge.weight
+      destination: edge.source
+//      weight: edge.weight
     )
     adjacencies[edge.destination]!.append(reversedEdge)
   }

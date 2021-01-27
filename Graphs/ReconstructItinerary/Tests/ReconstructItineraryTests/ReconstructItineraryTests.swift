@@ -12,13 +12,22 @@ final class ReconstructItineraryTests: XCTestCase {
     }
   
   func testExampleTwo() {
-//    let result = findItinerary([["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]])
-    let result = findItinerary([["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]])
-//    let answer = ["JFK","ATL","JFK","SFO","ATL","SFO"]
-    let answer = ["JFK","NRT","JFK","KUL"]
+    let result = findItinerary([["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]])
+    let answer = ["JFK","ATL","JFK","SFO","ATL","SFO"]
+    XCTAssertEqual(answer, result)
+  }
+  
+  func testExampleThree() {
+    let result = findItinerary([["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]])
+    let answer = ["JFK","ATL","JFK","SFO","ATL","SFO"]
     XCTAssertEqual(answer, result)
   }
 
+  func testExampleFour() {
+    let result = findItinerary([["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]])
+    let answer = ["JFK","NRT","JFK","KUL"]
+    XCTAssertEqual(answer, result)
+  }
     static var allTests = [
         ("testExample", testExample),
     ]

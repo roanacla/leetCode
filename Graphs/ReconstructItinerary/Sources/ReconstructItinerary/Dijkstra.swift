@@ -25,8 +25,13 @@ enum Dijkstra<Graph: ReconstructItinerary.Graph> where Graph.Element: Hashable {
         .map { $0.weight }
         .reduce(0, +)
     }
+    
+    func getName(from vertex: Vertex ) -> Graph.Element {
+      return vertex.element
+    }
 
-    var priorityQueue = PriorityQueue { getWeight(to: $0) < getWeight(to: $1) }
+//    var priorityQueue = PriorityQueue { getWeight(to: $0) < getWeight(to: $1) }
+    var priorityQueue = PriorityQueue { (getName(from: $0) as! String) < (getName(from: $1) as! String) }
     priorityQueue.enqueue(source)
     while let vertex = priorityQueue.dequeue() {
       graph.getEdges(from: vertex)

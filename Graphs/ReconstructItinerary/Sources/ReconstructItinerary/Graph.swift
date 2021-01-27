@@ -29,7 +29,7 @@ struct GraphEdge<Element> {
 
   let source: Vertex
   let destination: Vertex
-  let weight: Double
+  let weight: Double = 0
 }
 
 extension GraphEdge: Equatable where Element: Equatable { }
