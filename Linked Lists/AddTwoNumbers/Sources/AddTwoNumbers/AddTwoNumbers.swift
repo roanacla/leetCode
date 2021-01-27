@@ -11,7 +11,16 @@ public class ListNode {
 
 extension ListNode: Equatable {
   public static func == (lhs: ListNode, rhs: ListNode) -> Bool {
-      return getNumber(listNode: lhs) == getNumber(listNode: rhs)
+    var lnext: ListNode? = lhs
+    var rnext: ListNode? = rhs
+    while lnext != nil && rnext != nil {
+      if lnext?.val != rnext?.val {
+        return false
+      }
+      lnext = lnext?.next
+      rnext = rnext?.next
+    }
+    return true
   }
 }
 
@@ -26,7 +35,15 @@ public class LinkedList {
   
   init(node: ListNode) {
     firstElement = node
-    lastElement = node
+    if node.next == nil {
+      lastElement = node      
+    } else {
+      var nextNode: ListNode? = node.next
+      while nextNode != nil {
+        nextNode = nextNode?.next
+      }
+      lastElement = nextNode
+    }
   }
   
   func append(node: ListNode) {
@@ -37,6 +54,18 @@ public class LinkedList {
       lastElement?.next = node
       lastElement = lastElement?.next!
     }
+  }
+  
+  func removeFirst() -> ListNode? {
+    guard !isEmpty() else { return nil }
+    let result = firstElement
+    if lastElement == firstElement {
+      firstElement = nil
+      lastElement = nil
+    } else {
+      firstElement = firstElement?.next
+    }
+    return result
   }
   
   func getLastElement() -> ListNode? {
@@ -70,6 +99,30 @@ func convertToLinkedList(number: Int) -> ListNode {
   return linkedList.firstElement!
 }
 
+func sum(listNode1: ListNode, listNode2: ListNode) -> ListNode {
+  let linkedList1 = LinkedList(node: listNode1)
+  let linkedList2 = LinkedList(node: listNode2)
+  let result = LinkedList()
+  var remainder = 0
+  
+  while !linkedList1.isEmpty() || !linkedList2.isEmpty() || remainder > 0 {
+    let elem1 = linkedList1.removeFirst()
+    let elem2 = linkedList2.removeFirst()
+    
+    let sum = (elem1?.val ?? 0) + (elem2?.val ?? 0) + remainder
+    if  sum > 9 {
+      remainder = 1
+      result.append(node: ListNode(sum - 10))
+    } else {
+      result.append(node: ListNode(sum))
+      remainder = 0
+    }
+    print(result.getLastElement()?.val)
+  }
+  
+  return result.firstElement ?? ListNode(0)
+}
+
 func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
   if l1 == nil {
     return l2 == nil ? nil : l2
@@ -80,7 +133,5 @@ func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
   let l1 = l1!
   let l2 = l2!
   
-  let total = getNumber(listNode: l1) + getNumber(listNode: l2)
-  
-  return convertToLinkedList(number: total)
+  return sum(listNode1: l1, listNode2: l2)
 }
