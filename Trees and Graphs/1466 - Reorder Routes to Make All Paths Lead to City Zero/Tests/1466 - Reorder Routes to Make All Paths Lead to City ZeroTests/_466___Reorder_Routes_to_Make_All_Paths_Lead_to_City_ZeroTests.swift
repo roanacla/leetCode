@@ -1,14 +1,12 @@
 import XCTest
-@testable import Combination_Sum
+@testable import _466___Reorder_Routes_to_Make_All_Paths_Lead_to_City_Zero
 
-final class Combination_SumTests: XCTestCase {
+final class _466___Reorder_Routes_to_Make_All_Paths_Lead_to_City_ZeroTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        let candidates = [2,3,6,7]
-        let target = 7
-      XCTAssertEqual([[2,2,3],[7]], combinationSum(candidates, target))
+        XCTAssertEqual(_466___Reorder_Routes_to_Make_All_Paths_Lead_to_City_Zero().text, "Hello, World!")
     }
 
     static var allTests = [

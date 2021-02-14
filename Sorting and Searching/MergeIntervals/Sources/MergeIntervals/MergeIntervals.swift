@@ -18,3 +18,4 @@ func merge(_ intervals: [[Int]]) -> [[Int]] {
   return output
   
 }
+
