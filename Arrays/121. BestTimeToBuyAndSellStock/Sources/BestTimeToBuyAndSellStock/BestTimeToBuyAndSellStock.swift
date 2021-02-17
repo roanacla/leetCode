@@ -1,27 +1,17 @@
-struct BestTimeToBuyAndSellStock {
-    var text = "Hello, World!"
-}
+import Foundation
+
+
 
 func maxProfit(_ prices: [Int]) -> Int {
-  if prices.isEmpty || prices.count < 2 { return 0 }
-  var result = 0
-  var leftIndex = prices.startIndex
-  var rightIndex = leftIndex + 1
-  
-  while rightIndex < prices.count {
-    if prices[leftIndex] > prices[rightIndex] {
-      leftIndex = rightIndex
-      rightIndex = leftIndex + 1
-      continue
-    }
-    if prices[leftIndex] <= prices[rightIndex] {
-      let temp =  prices[rightIndex] - prices[leftIndex]
-      if result < temp {
-        result = temp
-      }
-      rightIndex += 1
+  var minimum = Int.max
+  var maxProfit = 0
+  for i in 0..<prices.count {
+    if prices[i] < minimum {
+      minimum = prices[i]
+    } else if prices[i] - minimum > maxProfit {
+      maxProfit = prices[i] - minimum
     }
   }
-  
-  return result
+  return maxProfit
 }
+
