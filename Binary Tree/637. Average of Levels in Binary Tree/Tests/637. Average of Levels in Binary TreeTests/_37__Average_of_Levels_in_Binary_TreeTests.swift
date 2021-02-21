@@ -16,7 +16,7 @@ final class _37__Average_of_Levels_in_Binary_TreeTests: XCTestCase {
     twenty.right = seven
     
     //      levelOrderBottom(three)
-    XCTAssertEqual([3.00000,14.50000,11.00000], averageOfLevels(three))
+    XCTAssertEqual([3.00000,14.50000,11.00000], averageOfLevelsBFS(three))
     
   }
   

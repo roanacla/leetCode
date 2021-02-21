@@ -32,3 +32,38 @@ private func averageOfLevels(_ root: TreeNode, _ levels: inout [[Int]], _ level:
   }
 }
 
+//currentLevel
+//nextLevel
+
+//add to currentLevel
+//add children of current node to nextLevel
+//if finish current level, copy items of nextLevel to currentLevel
+
+func averageOfLevelsBFS(_ root: TreeNode?) -> [Double] {
+  guard let root = root else { return [] }
+  var currentLevel: [TreeNode] = []
+  var nextLevel: [TreeNode] = []
+  var result: [[Int]] = []
+  
+  currentLevel.append(root)
+  var level = 0
+  while !currentLevel.isEmpty {
+    if result.count == level {
+      result.append([])
+    }
+    for node in currentLevel {
+      result[level].append(node.val)
+      if node.left != nil {
+        nextLevel.append(node.left!)
+      }
+      if node.right != nil {
+        nextLevel.append(node.right!)
+      }
+    }
+    currentLevel = nextLevel
+    nextLevel = []
+    level += 1
+  }
+  return result.map{ Double($0.reduce(0,+))/Double($0.count) }
+}
+
