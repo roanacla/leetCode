@@ -13,33 +13,12 @@ public class TreeNode {
   }
 }
 
-extension TreeNode {
-  func traverseInOrder(max: inout Int, current: inout Int) {
-    if let left = left {
-      current += 1
-      max = current > max ? current : max
-      left.traverseInOrder(max: &max, current: &current)
-    }
-    if let right = right {
-      if left == nil {
-        current += 1
-      }
-      max = current > max ? current : max
-      right.traverseInOrder(max: &max, current: &current)
-    }
-    if left != nil || right != nil {
-      current -= 1
-    }
-  }
-}
-
 func maxDepth(_ root: TreeNode?) -> Int {
-  if let treeNode = root {
-    var max = 1
-    var current = 1
-    treeNode.traverseInOrder(max: &max, current: &current)
-    return max
-  }
-  return 0
+  
+  guard let root = root else { return 0 }
+  
+  var leftDepth = root.left != nil ? maxDepth(root.left) : 0
+  var rightDepth = root.right != nil ? maxDepth(root.right) : 0
+  
+  return max(leftDepth, rightDepth) + 1
 }
-
