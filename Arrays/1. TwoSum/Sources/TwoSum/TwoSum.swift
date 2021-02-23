@@ -1,20 +1,18 @@
 struct TwoSum {
-    var text = "Hello, World!"
+  var text = "Hello, World!"
 }
 
 func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-  var auxDic: [Int:Int] = [:]
-  var index = 0
-  
-  while index < nums.count {
-    let firstNumber = nums[index]
-    let secondNumber = target - firstNumber
-    if let secondIndex = auxDic[secondNumber], index != secondIndex  {
-      return [index, secondIndex].sorted()
+  var dic: [Int:Int] = [:]
+  for index in 0..<nums.count {
+    let secondNumber = target - nums[index]
+    if dic[secondNumber] != nil {
+      let secondIndex = dic[secondNumber]!
+      return [secondIndex, index]
     } else {
-      auxDic[firstNumber] = index
+      dic[nums[index]] = index
     }
-    index += 1
   }
-  return [0,0]
+  
+  return [0,0] // no solution
 }
