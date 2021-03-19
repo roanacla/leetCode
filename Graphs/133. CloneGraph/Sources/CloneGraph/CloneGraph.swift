@@ -63,20 +63,30 @@ func cloneGraphBFS(_ node: Node?) -> Node? {
 
 //DFS
 
-func cloneGraphDFS(_ node: Node?) -> Node? {
+func cloneGraph(_ node: Node?) -> Node? {
   guard let node = node else { return nil }
-  let clone = Node(node.val)
-  visited[node.val] = clone
-  for neighbor in node.neighbors {
-    if let neighbor = neighbor, visited[neighbor.val] == nil {
-      _ = cloneGraphDFS(neighbor)
+  var visitedDict: [Int: Node] = [:]
+  cloneGraphDFS(&visitedDict, [node])
+  return visitedDict[node.val]
+}
+
+func cloneGraphDFS(_ visitedDict: inout [Int: Node], _ stack: [Node]) {
+  guard !stack.isEmpty else { return }
+  var stack = stack
+  let currentNode = stack.popLast()!
+  let currentClone = Node(currentNode.val)
+  visitedDict[currentNode.val] = currentClone
+  
+  for neighbor in currentNode.neighbors {
+    if let neighbor = neighbor, visitedDict[neighbor.val] == nil {
+      stack.append(neighbor)
+      cloneGraphDFS(&visitedDict, stack)
     }
   }
-  for neighbor in node.neighbors {
+  
+  for neighbor in currentNode.neighbors {
     if let neighbor = neighbor {
-      let cloneNeighbor = visited[neighbor.val]
-      clone.neighbors.append(cloneNeighbor)
+      currentClone.neighbors.append(visitedDict[neighbor.val]!)
     }
   }
-  return clone
 }
