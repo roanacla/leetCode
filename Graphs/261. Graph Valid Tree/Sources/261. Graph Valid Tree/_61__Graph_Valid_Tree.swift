@@ -3,8 +3,8 @@ func createAdjacencyList(array: [[Int]]) -> [Int:[Int]] {
   var adjacencyList: [Int:[Int]] = [:]
   
   for edge in array {
-    adjacencyList[edge[0]] == nil ? adjacencyList[edge[0]] = [edge[1]] : adjacencyList[edge[0]]!.append(edge[1])
-    adjacencyList[edge[1]] == nil ? adjacencyList[edge[1]] = [edge[0]] : adjacencyList[edge[1]]!.append(edge[0])
+    adjacencyList[edge[0], default: []].append(edge[1])
+    adjacencyList[edge[1], default: []].append(edge[0])
   }
   
   return adjacencyList
