@@ -1,3 +1,4 @@
+var adjacencyList: [Int: [Int]] = [:]
 
 func createAdjacencyList(array: [[Int]]) -> [Int:[Int]] {
   var adjacencyList: [Int:[Int]] = [:]
@@ -14,31 +15,23 @@ func validTree(_ n: Int, _ edges: [[Int]]) -> Bool {
   if n == 1 { return true }
   guard edges.count == n - 1 else { return false }
   
-  let adjacencyList = createAdjacencyList(array: edges)
+  adjacencyList = createAdjacencyList(array: edges)
   var visited = Set<Int>()
-  return helper(-1, adjacencyList, &visited, [edges[0][0]] )
+  return validTreeDFS(-1, &visited, [edges[0][0]] )
 }
 
-
-func helper(_ parent: Int, _ adjacencyList: [Int:[Int]], _ visited: inout Set<Int>, _ stack: [Int] ) -> Bool {
+func validTreeDFS(_ parent: Int, _ visited: inout Set<Int>, _ stack: [Int] ) -> Bool {
   var stack = stack
   let currentNode = stack.popLast()!
-  guard !visited.contains(currentNode) else { return false }
   visited.insert(currentNode)
-  let neighbors = adjacencyList[currentNode]!
   
-  for neighbor in neighbors {
+  for neighbor in adjacencyList[currentNode]! {
     if neighbor != parent {
+      guard !visited.contains(neighbor) else { return false }
       stack.append(neighbor)
-      let result = helper(currentNode, adjacencyList, &visited, stack)
-      if result == false {
-        return false
-      }
+      guard validTreeDFS(currentNode, &visited, stack) else { return false }
     }
   }
   
   return true
 }
-
-
-
