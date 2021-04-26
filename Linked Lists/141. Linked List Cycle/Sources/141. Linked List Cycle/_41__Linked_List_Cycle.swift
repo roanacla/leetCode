@@ -9,19 +9,15 @@ public class ListNode {
 }
 
 func hasCycle(_ head: ListNode?) -> Bool {
-  guard let head = head else { return false }
-  var slowPointer: ListNode? = head
-  var fastPointer: ListNode? = head.next
+  guard head != nil, head?.next != nil else { return false }
+  var slowPointer = head
+  var fastPointer = head?.next
   
-  while fastPointer != nil {
-    //fix fastPointer Optional
-    guard let slow = slowPointer, let fast = fastPointer else { return false }
-    if slow === fast {
-      return true
-    }
-    slowPointer = slow.next
-    fastPointer = fast.next?.next
+  while slowPointer !== fastPointer {
+    slowPointer = slowPointer?.next
+    fastPointer = fastPointer?.next?.next
+    if fastPointer == nil { return false }
   }
   
-  return false
+  return true
 }
