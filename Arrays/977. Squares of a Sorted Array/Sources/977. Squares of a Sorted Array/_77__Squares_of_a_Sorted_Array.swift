@@ -9,31 +9,23 @@ import Foundation
 //}
 
 func sortedSquares(_ nums: [Int]) -> [Int] {
-    var rightIndex = 0
-    
-    for num in nums {
-      if num >= 0 {
-        break
-      } else {
-        rightIndex += 1
-      }
+  var totalItems = nums.count
+  var result = [Int](repeating: 0, count: totalItems)
+  
+  var left = 0
+  var right = totalItems - 1
+  
+  for i in (0..<nums.count).reversed() {
+    var square = 0
+    if abs(nums[left]) < abs(nums[right]) {
+      square = nums[right]
+      right -= 1
+    } else {
+      square = nums[left]
+      left += 1
     }
-    var leftIndex = rightIndex - 1
-    var result: [Int] = []
-    while rightIndex < nums.count {
-        if leftIndex >= 0 && nums[leftIndex]*nums[leftIndex] < nums[rightIndex]*nums[rightIndex] {
-          result.append(nums[leftIndex]*nums[leftIndex])
-          leftIndex -= 1
-        } else {
-          result.append(nums[rightIndex]*nums[rightIndex])
-          rightIndex += 1
-        }
-    }
-    while leftIndex >= 0 {
-      result.append(nums[leftIndex]*nums[leftIndex])
-      leftIndex -= 1
-    }
-    
-    
-    return result
+    result[i] = square * square
   }
+  
+  return result
+}
