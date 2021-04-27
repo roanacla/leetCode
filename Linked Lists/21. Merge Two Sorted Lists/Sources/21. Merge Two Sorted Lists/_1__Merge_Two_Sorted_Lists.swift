@@ -7,28 +7,25 @@ public class ListNode {
 }
 
 func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
-  guard l1 != nil else { return l2 ?? nil}
-  guard l2 != nil else { return l1 ?? nil}
-  var xPointer = l1
-  var yPointer = l2
+  var l1 = l1
+  var l2 = l2
   
-  var resPointer: ListNode? = ListNode(-101)
-  let result = resPointer
+  let preHead = ListNode(-1)
+  var prev = preHead
   
-  while xPointer != nil && yPointer != nil {
-    let isXGreater = xPointer!.val > yPointer!.val ? true : false
-    if isXGreater {
-      resPointer?.next = ListNode(yPointer!.val)
-      yPointer = yPointer?.next
-    } else {
-      resPointer?.next = ListNode(xPointer!.val)
-      xPointer = xPointer?.next
-    }
-    resPointer = resPointer?.next
+  while l1 != nil && l2 != nil {
+      if l1!.val <= l2!.val {
+          prev.next = l1
+          l1 = l1!.next
+      } else {
+          prev.next = l2
+          l2 = l2!.next
+      }
+      prev = prev.next!
   }
-  resPointer?.next = xPointer ?? yPointer
   
+  prev.next = l1 == nil ? l2 : l1
   
-  return result?.next
+  return preHead.next
   
 }
