@@ -3,29 +3,18 @@
   // 2. if i == 0; return j
   // 3. if i != j && i < j; return dic[j] - dic[i -1]
   
-class NumArray {
-  
-  var dic : [Int:Int] = [:]
-  
-  init(_ nums: [Int]) {
-    for i in 0..<nums.count {
-      if i == 0 {
-        dic[i] = nums[i]
-      } else {
-        dic[i] = nums[i] + dic[i-1]!
+class NumArray {  
+  var data: [Int]
+
+      init(_ nums: [Int]) {
+         data = [Int](repeating: 0, count: nums.count + 1)
+         for i in 0..<nums.count {
+             data[i+1] = data[i] + nums[i]
+         }
+          print(data)
       }
       
-    }
-  }
-  
-  func sumRange(_ i: Int, _ j: Int) -> Int {
-    if i > j || j >= dic.count { return 0 }
-    if i == 0 {
-      return dic[j]!
-    } else if i <= j {
-      return dic[j]! - dic[i - 1]!
-    } else {
-      return 0
-    }
-  }
+      func sumRange(_ left: Int, _ right: Int) -> Int {
+          return data[right + 1] - data[left]
+      }
 }
