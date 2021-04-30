@@ -11,22 +11,19 @@ public class ListNode {
 
 func reverseList(_ head: ListNode?) -> ListNode? {
   guard let head = head else { return nil }
-  var leftPointer: ListNode? = head
-  var rightPointer: ListNode? = head.next
-  var isFirst = true
+  var prev:ListNode? = nil
+  var current = head
+  var next: ListNode? = head.next
   
-  while rightPointer != nil {
-    let oldRightNext = rightPointer?.next
-    let oldRight = rightPointer
-    rightPointer?.next = leftPointer
-    if isFirst {
-      leftPointer?.next = nil
-      isFirst = false
-    }
-    rightPointer = oldRightNext
-    leftPointer = oldRight
+  while next != nil {
+    current.next = prev
+    prev = current
+    current = next!
+    next = next?.next
   }
-  return leftPointer
+  current.next = prev
+  
+  return current
 }
 
 
