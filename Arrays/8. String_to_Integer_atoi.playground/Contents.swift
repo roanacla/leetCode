@@ -69,3 +69,8 @@ class Solution {
 
 let input = "42"
 Solution().myAtoi(input)
+
+Int64.max
+Int.max
+
+Int.max > Int32.max
