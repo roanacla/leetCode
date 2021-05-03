@@ -1,16 +1,14 @@
 class Solution {
-
-    func findDuplicate(_ nums: [Int]) -> Int {
-      var dic: [Int:Int] = [:]
-      var result = 0
-      for num in nums {
-        dic[num, default: 0] += 1
-        if dic[num] == 2 {
-          result = num
-          break
-        }
+  
+  func findDuplicate(_ nums: [Int]) -> Int {
+    var set: Set<Int> = []
+    for num in nums {
+      if set.contains(num) {
+        return num
+      } else {
+        set.insert(num)
       }
-      
-      return result
     }
+    return -1
+  }
 }
