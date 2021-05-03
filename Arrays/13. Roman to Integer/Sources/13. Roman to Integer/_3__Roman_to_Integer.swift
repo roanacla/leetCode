@@ -1,7 +1,7 @@
 
 func romanToInt(_ s: String) -> Int {
   //Dictionary
-  var romanDict: [String: Int] = ["I": 1,
+  let romanDict: [String: Int] = ["I": 1,
                                   "IV": 4,
                                   "V": 5,
                                   "IX": 9,
