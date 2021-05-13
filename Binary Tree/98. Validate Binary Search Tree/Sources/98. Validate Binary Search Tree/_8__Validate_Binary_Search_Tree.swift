@@ -14,15 +14,15 @@ public class TreeNode {
 }
 
 class Solution {
-  func isValidBST(_ root: TreeNode?) -> Bool {
-    guard let root = root else { return false }
-    return helper(root, min: Int.min, max: Int.max)
-  }
-  
-  func helper(_ node: TreeNode?, min: Int, max: Int) -> Bool {
-    guard let node = node else { return true }
-    if node.val <= min || node.val >= max { return false }
-    return helper(node.left, min: min, max: node.val) &&
-      helper(node.right, min: node.val, max: max)
-  }
+    func isValidBST(_ root: TreeNode?) -> Bool {
+      guard let root = root else { return   false }
+      return helper(root, min: Int.min, max: Int.max)
+    }
+    
+    func helper(_ node: TreeNode?, min: Int, max: Int) -> Bool {
+      guard let node = node else { return true }
+      if node.val <= min || node.val >= max { return false }
+      return helper(node.left, min: min, max: node.val) &&
+        helper(node.right, min: node.val, max: max)
+    }
 }
