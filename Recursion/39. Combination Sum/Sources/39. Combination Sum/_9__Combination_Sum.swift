@@ -6,13 +6,13 @@ class Solution {
     
     func combinationSum(_ candidates: [Int], _ target: Int) -> [[Int]] {
         for i in 0..<candidates.count {
-            helper(candidates, target, i, [])
+            let row: [Int] = []
+            helper(candidates, target, i, row)
         }
         return result
     }
     
     func helper(_ candidates: [Int], _ target: Int, _ index: Int, _ row: [Int] = [] ) {
-        guard index < candidates.count else { return }
         let num = candidates[index]
         
         if target - num == 0 {
@@ -21,6 +21,7 @@ class Solution {
             result.append(row)
             return
         }
+        
         if target - num < 0 {
             return
         }
@@ -30,7 +31,8 @@ class Solution {
             row.append(num)
             var index = index
             while index < candidates.count {
-                helper(candidates, target - num, index, row)
+                let newTarget = target - num
+                helper(candidates, newTarget, index, row)
                 index += 1
             }
         }
