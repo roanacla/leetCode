@@ -1,37 +1,45 @@
 class Solution {
-    var rows = 0
-    var columns = 0
-    var board: [[Character]] = []
-    func exist(_ board: [[Character]], _ word: String) -> Bool {
-        self.rows = board.count
-        self.columns = board[0].count
-        self.board = board
-        
-        for row in 0..<rows {
-            for column in 0..<columns {
-                if backtrack(row, column, word) {
-                    return true
-                }
-            }
+  var helperBoard: [[Bool]] = []
+  
+  func exist(_ board: [[Character]], _ word: String) -> Bool {
+    let helperRow: [Bool] = [Bool](repeating: false, count: board[0].count)
+    helperBoard = [[Bool]](repeating: helperRow, count: board.count)
+    let word = Array(word)
+    
+    for row in 0..<board.count {
+      for col in 0..<board[0].count {
+        if helper(board, word, row, col) {
+          return true
         }
-        
-        return false
+      }
     }
     
-    func backtrack(_ row: Int, _ column: Int, _ suffix: String) -> Bool {
-        if suffix.count == 0 {
-            return true
-        }
-        if row < 0 || row == rows || column < 0 || column == columns || board[row][column] != suffix[suffix.startIndex] {
-            return false
-        }
-        board[row][column] = "#"
-        for (rowOffset, columnOffset) in [(0,1), (-1, 0), (0, -1), (1,0)] {
-            if backtrack(row + rowOffset, column + columnOffset, String(suffix[suffix.index(after:suffix.startIndex)..<suffix.endIndex])) {
-                return true
-            }
-        }
-        board[row][column] = suffix[suffix.startIndex]
-        return false
+    return false
+  }
+  
+  func helper(_ board: [[Character]], _ word: [Character], _ row: Int, _ col: Int) -> Bool {
+    
+    let boardChar = board[row][col]
+    let wordChar = word[0]
+    
+    if wordChar == boardChar {
+      helperBoard[row][col] = true
+      let w = Array(word[1...])
+      if w.isEmpty { return true }
+      if row - 1 >= 0 && helperBoard[row - 1][col] == false {
+        if helper(board, w, row - 1, col) { return true }
+      }
+      if row + 1 < board.count && helperBoard[row + 1][col] == false {
+        if helper(board, w, row + 1, col) { return true }
+      }
+      if col - 1 >= 0 && helperBoard[row][col - 1] == false {
+        if helper(board, w, row, col - 1) { return true }
+      }
+      if col + 1 < board[row].count && helperBoard[row][col + 1] == false {
+        if helper(board, w, row, col + 1) { return true }
+      }
+      helperBoard[row][col] = false
     }
+    return false
+  }
 }
