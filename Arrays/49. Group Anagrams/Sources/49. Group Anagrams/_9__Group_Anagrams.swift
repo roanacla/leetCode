@@ -17,3 +17,17 @@ class Solution {
     return Array(dict.values)
   }
 }
+
+// Other solution:
+
+class SolutionTwo {
+    func groupAnagrams(_ strs: [String]) -> [[String]] {
+        var dict: [String: [String]] = [:]
+        
+        for word in strs {
+            let key = String(Array(word).sorted())
+            dict[key, default: []].append(word)
+        }
+        return dict.map{$0.value}
+    }
+}
