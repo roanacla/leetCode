@@ -28,8 +28,8 @@ func createLine(words: [String], maxWidth: Int) -> String {
   var count = words.reduce(into: 0) { result, word in
     result += word.count
   }
-  let spacesToUse = maxWidth - count //5
-  let spacesBwtWords = words.count - 1 // 3
+  let spacesToUse = maxWidth - count
+  let spacesBwtWords = words.count - 1
   var result = ""
   for word in words {
     result += word
