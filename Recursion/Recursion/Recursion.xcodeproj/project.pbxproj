@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB56E382253F695000D90D8E /* RecursionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56E381253F695000D90D8E /* RecursionApp.swift */; };
+		DB56E384253F695000D90D8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56E383253F695000D90D8E /* ContentView.swift */; };
+		DB56E386253F695200D90D8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB56E385253F695200D90D8E /* Assets.xcassets */; };
+		DB56E389253F695200D90D8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB56E388253F695200D90D8E /* Preview Assets.xcassets */; };
+		DB56E394253F695200D90D8E /* RecursionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56E393253F695200D90D8E /* RecursionTests.swift */; };
+		DB56E39F253F695200D90D8E /* RecursionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56E39E253F695200D90D8E /* RecursionUITests.swift */; };
+		DB56E3B0253F696C00D90D8E /* ReverseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56E3AF253F696C00D90D8E /* ReverseString.swift */; };
+		DBC731B32540EDA800F3F67E /* SwapPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC731B22540EDA800F3F67E /* SwapPairs.swift */; };
+		DBC731B42540EDA800F3F67E /* SwapPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC731B22540EDA800F3F67E /* SwapPairs.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB56E390253F695200D90D8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB56E376253F695000D90D8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB56E37D253F695000D90D8E;
+			remoteInfo = Recursion;
+		};
+		DB56E39B253F695200D90D8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB56E376253F695000D90D8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB56E37D253F695000D90D8E;
+			remoteInfo = Recursion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB56E37E253F695000D90D8E /* Recursion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recursion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB56E381253F695000D90D8E /* RecursionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursionApp.swift; sourceTree = "<group>"; };
+		DB56E383253F695000D90D8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DB56E385253F695200D90D8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB56E388253F695200D90D8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DB56E38A253F695200D90D8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB56E38F253F695200D90D8E /* RecursionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecursionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB56E393253F695200D90D8E /* RecursionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursionTests.swift; sourceTree = "<group>"; };
+		DB56E395253F695200D90D8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB56E39A253F695200D90D8E /* RecursionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecursionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB56E39E253F695200D90D8E /* RecursionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursionUITests.swift; sourceTree = "<group>"; };
+		DB56E3A0253F695200D90D8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB56E3AF253F696C00D90D8E /* ReverseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseString.swift; sourceTree = "<group>"; };
+		DBC731B22540EDA800F3F67E /* SwapPairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapPairs.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB56E37B253F695000D90D8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB56E38C253F695200D90D8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB56E397253F695200D90D8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB56E375253F695000D90D8E = {
+			isa = PBXGroup;
+			children = (
+				DB56E380253F695000D90D8E /* Recursion */,
+				DB56E392253F695200D90D8E /* RecursionTests */,
+				DB56E39D253F695200D90D8E /* RecursionUITests */,
+				DB56E37F253F695000D90D8E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB56E37F253F695000D90D8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB56E37E253F695000D90D8E /* Recursion.app */,
+				DB56E38F253F695200D90D8E /* RecursionTests.xctest */,
+				DB56E39A253F695200D90D8E /* RecursionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB56E380253F695000D90D8E /* Recursion */ = {
+			isa = PBXGroup;
+			children = (
+				DB56E381253F695000D90D8E /* RecursionApp.swift */,
+				DB56E383253F695000D90D8E /* ContentView.swift */,
+				DB56E385253F695200D90D8E /* Assets.xcassets */,
+				DB56E38A253F695200D90D8E /* Info.plist */,
+				DB56E387253F695200D90D8E /* Preview Content */,
+				DB56E3AF253F696C00D90D8E /* ReverseString.swift */,
+				DBC731B22540EDA800F3F67E /* SwapPairs.swift */,
+			);
+			path = Recursion;
+			sourceTree = "<group>";
+		};
+		DB56E387253F695200D90D8E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DB56E388253F695200D90D8E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DB56E392253F695200D90D8E /* RecursionTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB56E393253F695200D90D8E /* RecursionTests.swift */,
+				DB56E395253F695200D90D8E /* Info.plist */,
+			);
+			path = RecursionTests;
+			sourceTree = "<group>";
+		};
+		DB56E39D253F695200D90D8E /* RecursionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DB56E39E253F695200D90D8E /* RecursionUITests.swift */,
+				DB56E3A0253F695200D90D8E /* Info.plist */,
+			);
+			path = RecursionUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB56E37D253F695000D90D8E /* Recursion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB56E3A3253F695200D90D8E /* Build configuration list for PBXNativeTarget "Recursion" */;
+			buildPhases = (
+				DB56E37A253F695000D90D8E /* Sources */,
+				DB56E37B253F695000D90D8E /* Frameworks */,
+				DB56E37C253F695000D90D8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Recursion;
+			productName = Recursion;
+			productReference = DB56E37E253F695000D90D8E /* Recursion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB56E38E253F695200D90D8E /* RecursionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB56E3A6253F695200D90D8E /* Build configuration list for PBXNativeTarget "RecursionTests" */;
+			buildPhases = (
+				DB56E38B253F695200D90D8E /* Sources */,
+				DB56E38C253F695200D90D8E /* Frameworks */,
+				DB56E38D253F695200D90D8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB56E391253F695200D90D8E /* PBXTargetDependency */,
+			);
+			name = RecursionTests;
+			productName = RecursionTests;
+			productReference = DB56E38F253F695200D90D8E /* RecursionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DB56E399253F695200D90D8E /* RecursionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB56E3A9253F695200D90D8E /* Build configuration list for PBXNativeTarget "RecursionUITests" */;
+			buildPhases = (
+				DB56E396253F695200D90D8E /* Sources */,
+				DB56E397253F695200D90D8E /* Frameworks */,
+				DB56E398253F695200D90D8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB56E39C253F695200D90D8E /* PBXTargetDependency */,
+			);
+			name = RecursionUITests;
+			productName = RecursionUITests;
+			productReference = DB56E39A253F695200D90D8E /* RecursionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB56E376253F695000D90D8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					DB56E37D253F695000D90D8E = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					DB56E38E253F695200D90D8E = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = DB56E37D253F695000D90D8E;
+					};
+					DB56E399253F695200D90D8E = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = DB56E37D253F695000D90D8E;
+					};
+				};
+			};
+			buildConfigurationList = DB56E379253F695000D90D8E /* Build configuration list for PBXProject "Recursion" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB56E375253F695000D90D8E;
+			productRefGroup = DB56E37F253F695000D90D8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB56E37D253F695000D90D8E /* Recursion */,
+				DB56E38E253F695200D90D8E /* RecursionTests */,
+				DB56E399253F695200D90D8E /* RecursionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB56E37C253F695000D90D8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB56E389253F695200D90D8E /* Preview Assets.xcassets in Resources */,
+				DB56E386253F695200D90D8E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB56E38D253F695200D90D8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB56E398253F695200D90D8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB56E37A253F695000D90D8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC731B32540EDA800F3F67E /* SwapPairs.swift in Sources */,
+				DB56E384253F695000D90D8E /* ContentView.swift in Sources */,
+				DB56E382253F695000D90D8E /* RecursionApp.swift in Sources */,
+				DB56E3B0253F696C00D90D8E /* ReverseString.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB56E38B253F695200D90D8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC731B42540EDA800F3F67E /* SwapPairs.swift in Sources */,
+				DB56E394253F695200D90D8E /* RecursionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB56E396253F695200D90D8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB56E39F253F695200D90D8E /* RecursionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB56E391253F695200D90D8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB56E37D253F695000D90D8E /* Recursion */;
+			targetProxy = DB56E390253F695200D90D8E /* PBXContainerItemProxy */;
+		};
+		DB56E39C253F695200D90D8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB56E37D253F695000D90D8E /* Recursion */;
+			targetProxy = DB56E39B253F695200D90D8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DB56E3A1253F695200D90D8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB56E3A2253F695200D90D8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB56E3A4253F695200D90D8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Recursion/Preview Content\"";
+				DEVELOPMENT_TEAM = G3B2ACWEFM;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Recursion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alquimia.Recursion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB56E3A5253F695200D90D8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Recursion/Preview Content\"";
+				DEVELOPMENT_TEAM = G3B2ACWEFM;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Recursion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alquimia.Recursion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DB56E3A7253F695200D90D8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3B2ACWEFM;
+				INFOPLIST_FILE = RecursionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alquimia.RecursionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recursion.app/Recursion";
+			};
+			name = Debug;
+		};
+		DB56E3A8253F695200D90D8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3B2ACWEFM;
+				INFOPLIST_FILE = RecursionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alquimia.RecursionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recursion.app/Recursion";
+			};
+			name = Release;
+		};
+		DB56E3AA253F695200D90D8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3B2ACWEFM;
+				INFOPLIST_FILE = RecursionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alquimia.RecursionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Recursion;
+			};
+			name = Debug;
+		};
+		DB56E3AB253F695200D90D8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3B2ACWEFM;
+				INFOPLIST_FILE = RecursionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alquimia.RecursionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Recursion;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB56E379253F695000D90D8E /* Build configuration list for PBXProject "Recursion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB56E3A1253F695200D90D8E /* Debug */,
+				DB56E3A2253F695200D90D8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB56E3A3253F695200D90D8E /* Build configuration list for PBXNativeTarget "Recursion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB56E3A4253F695200D90D8E /* Debug */,
+				DB56E3A5253F695200D90D8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB56E3A6253F695200D90D8E /* Build configuration list for PBXNativeTarget "RecursionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB56E3A7253F695200D90D8E /* Debug */,
+				DB56E3A8253F695200D90D8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB56E3A9253F695200D90D8E /* Build configuration list for PBXNativeTarget "RecursionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB56E3AA253F695200D90D8E /* Debug */,
+				DB56E3AB253F695200D90D8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB56E376253F695000D90D8E /* Project object */;
+}
