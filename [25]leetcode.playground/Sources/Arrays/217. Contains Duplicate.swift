@@ -9,6 +9,12 @@ public class Problem_217: Runner {
     
     public init() {}
     
+    //Problem solved on Nov 27
+    func containsDuplicateTwo(_ nums: [Int]) -> Bool {
+        let set = Set(nums)
+        return set.count != nums.count
+    }
+    
     public func containsDuplicate(_ nums: [Int]) -> Bool {
             let arrayCount = nums.count
             let setCount = Set(nums).count
