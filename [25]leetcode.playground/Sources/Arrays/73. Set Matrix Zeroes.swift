@@ -11,6 +11,29 @@
 //Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
 
 class Problem_73 {
+    func setZeroesTwo(_ matrix: inout [[Int]]) {
+        var setCol = Set<Int>()
+        var setRow = Set<Int>()
+        
+        for row in 0..<matrix.count {
+            for col in 0..<matrix[row].count {
+                let num = matrix[row][col]
+                if num == 0 {
+                    setRow.insert(row)
+                    setCol.insert(col)
+                }
+            }
+        }
+        
+        for row in 0..<matrix.count {
+            for col in 0..<matrix[row].count {
+                if setRow.contains(row) || setCol.contains(col) {
+                    matrix[row][col] = 0
+                }
+            }
+        }
+    }
+    
     func setZeroes(_ matrix: inout [[Int]]) {
         var columns: Set<Int> = []
         var rows: Set<Int> = []
