@@ -6,6 +6,27 @@
 //
 
 public class Problem_128: Runner {
+    func longestConsecutiveTwo(_ nums: [Int]) -> Int {
+        var set = Set(nums)
+        var lenght = 0
+        var longest = 0
+        for num in set {
+            if set.contains(num - 1) {
+                continue
+            } else {
+                lenght = 1
+                var num = num + 1
+                while set.contains(num) {
+                    lenght += 1
+                    num += 1
+                }
+            }
+            longest = max(longest, lenght)
+        }
+        
+        return longest
+    }
+    
     func longestConsecutive(_ nums: [Int]) -> Int {
         var set = Set(nums)
         var maxCounter = 0
