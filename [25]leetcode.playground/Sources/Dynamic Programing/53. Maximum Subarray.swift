@@ -24,7 +24,7 @@ class Problem_53 {
         var maxi = -10000
         
         for num in nums {
-            current = max((current + num), num)
+            current = max(current + num, num)
             maxi = max(maxi, current)
         }
         
