@@ -31,6 +31,17 @@ public class Problem_70: Runner {
         return result
     }
     
+    func climbStarisThree(_ n: Int) -> Int {
+        guard n > 1 else { return 1 }
+        var stepsCounter = Array(repeating: 1, count: n)
+        stepsCounter[1] = 2
+        
+        for step in 2..<n {
+            stepsCounter[step] = stepsCounter[step - 1] + stepsCounter[step - 2]
+        }
+        return stepsCounter[n - 1]
+    }
+    
     public func runCode() {
         print("70. Climb Stairs")
         print(climbStairs(2) == 2 ? "Passed" : "Failed")
