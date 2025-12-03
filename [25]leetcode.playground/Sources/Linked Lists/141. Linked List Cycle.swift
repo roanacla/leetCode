@@ -8,6 +8,21 @@
 public class Problem_141: Runner {
     public init() {}
     
+    func hasCycleTwo(_ head: ListNode?) -> Bool {
+        var slow = head
+        var fast = head?.next?.next
+        
+        while fast != nil {
+            if slow === fast {
+                return true
+            }
+            slow = slow?.next
+            fast = fast?.next?.next
+        }
+        
+        return false
+    }
+    
     public func hasCycle(_ head: ListNode?) -> Bool {
 //        guard let _ = head, let _ = head!.next else { return false }
         var currentNode = head
