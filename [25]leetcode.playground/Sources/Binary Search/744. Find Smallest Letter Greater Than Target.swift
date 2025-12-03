@@ -46,6 +46,23 @@ public class Problem_744: Runner {
         return letters[leftEdge..<letters.count].first(where: {target <= $0}) ?? letters[0]
     }
     
+    func nextGreatestLetterThree(_ letters: [Character], _ target: Character) -> Character {
+            var midIndex = letters.count / 2
+            var rightEdge = letters.count - 1
+            var leftEdge = 0
+
+            while leftEdge <= rightEdge {
+                if letters[midIndex] <= target {
+                    leftEdge = midIndex + 1
+                } else if letters[midIndex] > target {
+                    rightEdge = midIndex - 1
+                }
+                midIndex = leftEdge + ((rightEdge - leftEdge) / 2)
+            }
+
+            return (0..<letters.count).contains(midIndex) ? letters[midIndex] : letters[0]
+        }
+    
     public func runCode() {
         print("744. Find Smallest Letter Greater than Target")
         
