@@ -13,6 +13,15 @@ public class Problem_104: Runner {
         return level
     }
     
+    func maxDepthTwo(_ root: TreeNode?) -> Int {
+        guard let root else { return 0 }
+        let left = maxDepth(root.left)
+        let right = maxDepth(root.right)
+        var result = max(left, right)
+        result += 1
+        return result
+    }
+    
     public func runCode() {
         print("104. Maximum Depth of Binary Tree")
         var rootNode = buildTree([3,9,20,nil,nil,15,7])
