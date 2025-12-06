@@ -23,6 +23,15 @@ public class Problem_112: Runner {
         return false
     }
     
+    func hasPathSumTwo(_ root: TreeNode?, _ targetSum: Int) -> Bool {
+        guard let root else { return false }
+        let newTarget = targetSum - root.val
+        if newTarget == 0, root.left == nil, root.right == nil {
+            return true
+        }
+        return hasPathSum(root.left, newTarget) || hasPathSum(root.right, newTarget)
+    }
+    
     public func runCode() {
         print("112. Path Sum")
         var treeNode = buildTree([5,4,8,11,nil,13,4,7,2,nil,nil,nil,1])

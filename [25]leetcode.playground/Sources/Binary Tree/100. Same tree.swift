@@ -14,6 +14,16 @@ public class Problem_100: Runner {
         return [p, q].compactMap {$0}.isEmpty
     }
     
+    func isSameTreeTwo(_ p: TreeNode?, _ q: TreeNode?) -> Bool {
+        guard p == nil && q == nil else {
+            if let p, let q, p.val == q.val {
+                return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
+            }
+            return false
+        }
+        return true
+    }
+    
     public func runCode() {
         print("100. Same Tree")
     }
