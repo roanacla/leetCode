@@ -26,6 +26,33 @@ public class TreeNode {
 
 public class Problem_637: Runner {
     //BFS
+    
+    func averageOfLevelsTwo(_ root: TreeNode?) -> [Double] {
+        guard let root else { return []}
+        var currentLevel: [TreeNode] = [root]
+        
+        var level = 0
+        var result: [[Int]] = []
+        
+        while !currentLevel.isEmpty {
+            var nextLevel: [TreeNode] = []
+            result.append([])
+            for node in currentLevel {
+                result[level].append(node.val)
+                if let left = node.left {
+                    nextLevel.append(left)
+                }
+                if let right = node.right {
+                    nextLevel.append(right)
+                }
+            }
+            level += 1
+            currentLevel = nextLevel
+        }
+        
+        return result.map {Double($0.reduce(0,+)) / Double($0.count)}
+    }
+    
     func averageOfLevels(_ root: TreeNode?) -> [Double] {
         guard let root else { return [] }
         var currentLevel: [TreeNode] = []
