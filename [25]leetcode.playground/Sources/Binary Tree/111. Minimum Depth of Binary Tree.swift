@@ -50,6 +50,31 @@ public class Problem_111: Runner {
         return level
     }
     
+    func minDepthTwo(_ root: TreeNode?) -> Int {
+            guard let root else { return 0 }
+            var currentLevel: [TreeNode] = [root]
+            var result = 0
+            out: while !currentLevel.isEmpty {
+                result += 1
+                var nextLevel: [TreeNode] = []
+                print(currentLevel.map{$0.val})
+                for node in currentLevel {
+                    if node.left == nil && node.right == nil {
+                        break out
+                    }
+                    if let left = node.left {
+                        nextLevel.append(left)
+                    }
+                    if let right = node.right {
+                        nextLevel.append(right)
+                    }
+                }
+                currentLevel = nextLevel
+            }
+
+            return result
+        }
+    
     
     public func runCode() {
         let root = TreeNode(3)
