@@ -27,18 +27,18 @@ public class TreeNode {
 public class Problem_637: Runner {
     //BFS
     
-    func averageOfLevelsTwo(_ root: TreeNode?) -> [Double] {
+    func averageOfLevels(_ root: TreeNode?) -> [Double] {
         guard let root else { return []}
         var currentLevel: [TreeNode] = [root]
         
         var level = 0
-        var result: [[Int]] = []
+        var result: [Double] = []
         
         while !currentLevel.isEmpty {
             var nextLevel: [TreeNode] = []
-            result.append([])
+            var sum: [Int] = []
             for node in currentLevel {
-                result[level].append(node.val)
+                sum.append(node.val)
                 if let left = node.left {
                     nextLevel.append(left)
                 }
@@ -46,11 +46,12 @@ public class Problem_637: Runner {
                     nextLevel.append(right)
                 }
             }
+            result.append(Double(sum.reduce(0,+)) / Double(sum.count))
             level += 1
             currentLevel = nextLevel
         }
         
-        return result.map {Double($0.reduce(0,+)) / Double($0.count)}
+        return result
     }
     
     func averageOfLevels(_ root: TreeNode?) -> [Double] {
