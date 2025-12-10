@@ -40,7 +40,7 @@ public class Problem_261: Runner {
             }
         }
         
-        return visited.all
+        return true
     }
     
     public func runCode() {

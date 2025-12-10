@@ -54,7 +54,7 @@ public class Problem_637: Runner {
         return result
     }
     
-    func averageOfLevels(_ root: TreeNode?) -> [Double] {
+    func averageOfLevelsTwo(_ root: TreeNode?) -> [Double] {
         guard let root else { return [] }
         var currentLevel: [TreeNode] = []
         var nextLevel: [TreeNode] = []

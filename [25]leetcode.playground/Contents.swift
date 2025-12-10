@@ -1,3 +1,3 @@
 import UIKit
 
-ProblemRunner(problemToRun: 234).runCode()
+ProblemRunner(problemToRun: 252).runCode()
