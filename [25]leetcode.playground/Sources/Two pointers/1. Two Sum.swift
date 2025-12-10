@@ -8,6 +8,25 @@
 //  You can return the answer in any order.
 
 public class Problem_1: Runner {
+    
+    func twoSumTwo(_ nums: [Int], _ target: Int) -> [Int] {
+        var dict: [Int: Int] = [:]
+        var result: [Int] = []
+        
+        for i in 0..<nums.count {
+            let next = target - nums[i]
+            
+            if dict[next] != nil, dict[next]! != i {
+                result = [i, dict[next]!]
+                break
+            } else {
+                dict[nums[i]] = i
+            }
+        }
+        
+        return result
+    }
+    
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         var result = [-1,-1]
         var index = 0
