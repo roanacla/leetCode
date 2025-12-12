@@ -35,6 +35,24 @@ public class Problem_209: Runner {
         return narrowestWindowSize
     }
     
+    func minSubArrayLenTwo(_ target: Int, _ nums: [Int]) -> Int {
+            var left = 0
+            var right = left
+            var best = 100001
+            var sum = 0
+
+            for right in 0..<nums.count {
+                sum += nums[right]
+                while sum >= target {
+                    sum -= nums[left]
+                    best = min(best, right - left + 1)
+                    left += 1
+                }
+            }
+
+            return best == 100001 ? 0 : best
+        }
+    
     public func runCode() {
         print("643. Missing Number")
         print(minSubArrayLen(7, [2,3,1,2,4,3]) == 2 ? "Passed" : "Failed")
