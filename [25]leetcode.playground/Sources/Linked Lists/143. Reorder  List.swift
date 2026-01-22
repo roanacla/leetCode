@@ -11,43 +11,36 @@
 class Problem_143 {
 
     func reorderList(_ head: ListNode?) {
-        var slow = head
-        var fast = head?.next
-
         // find the middle
+        var slow: ListNode? = head
+        var fast: ListNode? = head
+        
         while fast != nil {
-            let previous = slow
             slow = slow?.next
             fast = fast?.next?.next
-            if fast == nil {
-                previous?.next = nil
-            }
         }
-
-        var middle = slow
-
+        
+        //reverse second list
+        var middle: ListNode? = slow
         var previous: ListNode? = nil
-
+        
         while middle != nil {
             let next = middle?.next
             middle?.next = previous
             previous = middle
             middle = next
         }
-
-        var headTwo = previous
-
-        // merge
-        var headOne = head
         
-        while headTwo != nil {
-            let oneNext = headOne?.next
-            let twoNext = headTwo?.next
-            headOne?.next = headTwo
-            headTwo?.next = oneNext ?? twoNext
-            headOne = oneNext
-            headTwo = twoNext
+        //merge 🟠 Pay attention
+        var secondList = previous
+        var firstList = head
+        
+        while firstList != nil {
+            let fNext = firstList?.next
+            firstList?.next = secondList
+            firstList = secondList
+            secondList = fNext
         }
-
+        
     }
 }

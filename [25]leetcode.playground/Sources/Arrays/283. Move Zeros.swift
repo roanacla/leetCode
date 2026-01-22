@@ -10,6 +10,19 @@
 //Note that you must do this in-place without making a copy of the array.
 //
 public class Problem_283: Runner {
+    
+    func moveZeroesTwo(_ nums: inout [Int]) {
+        var insertPos = 0
+        for i in 0..<nums.count {
+            if nums[i] != 0 {
+                let num = nums[i]
+                nums[i] = nums[insertPos]
+                nums[insertPos] = num
+                insertPos += 1
+            }
+        }
+    }
+    
     func moveZeroes(_ nums: inout [Int]) {
         var zeroIndex = 0
         var headIndex = 1
